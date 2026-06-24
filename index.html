@@ -329,7 +329,7 @@
 
 <script>
 /* =========================================================================
-   THE FRAUD DESK — editorial dossier build (EN / 中文)
+   THE FRAUD DESK — editorial dossier build (EN / 中文）
    UI strings live in L; case content in CASES; each as { en, zh }.
    answer: "scam" = fraud, must be FLAGGED. "safe" = genuine, let pass.
    ========================================================================= */
@@ -376,19 +376,19 @@ const L = {
     issueMeta: "第 01 期 — 夜班",
     saved: "已挽回", lost: "已损失", callsRight: "判断正确",
     introKicker: "实务手册 · 夜班",
-    coverTitle: '在他们<em>点下去</em>之前,<br/>拦住它。',
-    introDek: "每天,骗子卷走数十亿——一次,一条像模像样的消息。今夜,你坐在拦下这些消息的柜台前。",
-    introBody: "你是夜班分析员。短信、转账、来电从你桌上经过;有的诚实,有的专为掏空一个人的积蓄而生。仔细读,找出破绽,为每一条判下裁定。拦下骗局——但对真消息草木皆兵,你也会失去信任。",
+    coverTitle: '在他们<em>点下去</em>之前，<br/>拦住它。',
+    introDek: "每天，骗子卷走数十亿——一次，一条像模像样的消息。今夜，你坐在拦下这些消息的柜台前。",
+    introBody: "你是夜班分析员。短信、转账、来电从你桌上经过；有的诚实，有的专为掏空一个人的积蓄而生。仔细读，找出破绽，为每一条判下裁定。拦下骗局——但对真消息草木皆兵，你也会失去信任。",
     startBtn: "开始当班 →",
     introContentsTitle: "本期 Demo",
-    introContentsBody: "一个夜班 · 五桩案件——一个更大游戏的切片(见尾页)。",
+    introContentsBody: "一个夜班 · 五桩案件——一个更大游戏的切片（见尾页）。",
     caseKickerWord: "案件", channelWord: "来件",
     exhibitWord: "物证", transcriptWord: "记录",
     atRisk: "风险金额", routine: "例行 — 无待办",
     rulingPrompt: "你的裁定",
     btnGenuineLbl: "判定为", btnGenuine: "属实",
     btnFraudLbl: "判定为", btnFraud: "诈骗",
-    hint: "记住:真正的银行,绝不会让你回读一次性验证码。",
+    hint: "记住：真正的银行，绝不会让你回读一次性验证码。",
     stampBlocked: "已拦截", stampCleared: "已放行", stampMissed: "漏网", stampFalse: "误判",
     tells: "破绽",
     next: "下一桩 →", seeReport: "归档结案 →",
@@ -396,16 +396,16 @@ const L = {
     gS: "完美的一班。没有一个漏网。",
     gA: "好眼力。你已经在读破绽了。",
     gB: "第一班不错——有几个精巧的溜了过去。",
-    gC: "有些过去了。重读破绽,再来一遍。",
+    gC: "有些过去了。重读破绽，再来一遍。",
     moneySaved: "已挽回", moneyLost: "已损失", accuracy: "准确率",
     lockTitle: "完整版收录",
     lockItem1: "八个班次——覆盖老年、学生、小微企业等柜台",
-    lockItem2: "20+ 真实诈骗剧本:深伪语音、收款码掉包、假冒客服专线",
-    lockItem3: "职业生涯模式:骗术随你的打法自适应进化",
+    lockItem2: "20+ 真实诈骗剧本：深伪语音、收款码掉包、假冒客服专线",
+    lockItem3: "职业生涯模式：骗术随你的打法自适应进化",
     lockItem4: "一个可免费分享给家人的开放案例库",
-    mission: "目标:把反诈意识练成本能——免费,人人可用。",
+    mission: "目标：把反诈意识练成本能——免费，人人可用。",
     replay: "重打这一班 →",
-    footer: "<b>这是一个 Demo</b><br/>为 The Demo Jam 2026 制作的切片。单个 HTML 文件,借助 Claude Code(Anthropic)vibe-coding。诈骗话术改编自公开反诈科普,未使用任何真实人名或品牌。",
+    footer: "<b>这是一个 Demo</b><br/>为 The Demo Jam 2026 制作的切片。单个 HTML 文件，借助 Claude Code(Anthropic)vibe-coding。诈骗话术改编自公开反诈科普，未使用任何真实人名或品牌。",
   },
 };
 
@@ -416,7 +416,7 @@ const CASES = [
     chan: { en: "SMS", zh: "短信" },
     sender: {
       en: 'Sender — <b>+1 (804) 220-9913</b>, claiming to be “NorthBank Security”',
-      zh: '发件人 — <b>+1 (804) 220-9913</b>,自称“北岸银行 安全中心”',
+      zh: '发件人 — <b>+1 (804) 220-9913</b>，自称「北岸银行 安全中心」',
     },
     text: {
       en: `NorthBank Alert: a login from a NEW DEVICE was detected on your account.
@@ -424,10 +424,10 @@ If this was NOT you, your account will be LOCKED in 30 minutes.
 
 Verify now: http://northbank-secure-verify.com/login
 Reply with the 6-digit code we just texted you to confirm it's you.`,
-      zh: `北岸银行提醒:检测到您的账户在一台新设备上登录。
-如果这不是您本人操作,您的账户将在 30 分钟内被冻结。
+      zh: `北岸银行提醒：检测到您的账户在一台新设备上登录。
+如果这不是您本人操作，您的账户将在 30 分钟内被冻结。
 
-立即验证:http://northbank-secure-verify.com/login
+立即验证：http://northbank-secure-verify.com/login
 回复我们刚发给您的 6 位验证码以确认身份。`,
     },
     flags: [
@@ -436,39 +436,39 @@ Reply with the 6-digit code we just texted you to confirm it's you.`,
       { en: "It asks for the one-time code. A real bank will never ask you to share it.",
         zh: "它索要一次性验证码。真正的银行绝不会让你把它交出去。" },
       { en: "A look-alike link: northbank-secure-verify.com is not the bank's true domain.",
-        zh: "仿冒链接:northbank-secure-verify.com 并非银行的真实域名。" },
+        zh: "仿冒链接：northbank-secure-verify.com 并非银行的真实域名。" },
     ],
     truthScam: { en: "Classic phishing. That code is the last wall between a thief and the account.",
-                 zh: "典型钓鱼。那串验证码,是窃贼与账户之间的最后一道墙。" },
+                 zh: "典型钓鱼。那串验证码，是窃贼与账户之间的最后一道墙。" },
     truthSafe: { en: "It was a scam — blocking it kept the customer's balance intact.",
-                 zh: "这是骗局——拦下它,保住了客户的余额。" },
+                 zh: "这是骗局——拦下它，保住了客户的余额。" },
   },
   {
     answer: "safe", risk: 0,
-    title: { en: "Fifty Dollars, No Strings", zh: "五十块,没有钩子" },
+    title: { en: "Fifty Dollars, No Strings", zh: "五十块，没有钩子" },
     chan: { en: "App notification", zh: "App 通知" },
     sender: {
       en: 'Source — <b>QuickPay Wallet</b>, the app the customer already uses',
-      zh: '来源 — <b>QuickPay 钱包</b>,客户本来就在用的 App',
+      zh: '来源 — <b>QuickPay 钱包</b>，客户本来就在用的 App',
     },
     text: {
       en: `Your friend Mei L. sent you $50.00 — “thanks for dinner!”
 The money is already in your QuickPay balance. No action needed.`,
-      zh: `你的好友 Mei L. 给你转了 ¥50.00 ——「请你吃饭的钱,谢啦!」
+      zh: `你的好友 Mei L. 给你转了 ¥50.00 ——「请你吃饭的钱，谢啦！」
 钱已到你的 QuickPay 余额。无需任何操作。`,
     },
     flags: [
       { en: "No link to tap, no code requested, no countdown.",
-        zh: "没有要点的链接,不要验证码,也没有倒计时。" },
+        zh: "没有要点的链接，不要验证码，也没有倒计时。" },
       { en: "The money is incoming and already settled — there is nothing to approve.",
-        zh: "钱是转入的,而且已经到账——根本没什么要你批准。" },
+        zh: "钱是转入的，而且已经到账——根本没什么要你批准。" },
       { en: "It arrives through the app the customer truly installed, not a stray text.",
-        zh: "它来自客户真正安装的 App,而非来路不明的短信。" },
+        zh: "它来自客户真正安装的 App，而非来路不明的短信。" },
     ],
     truthScam: { en: "This one was honest — flagging real messages teaches people to distrust real alerts.",
-                 zh: "这条是真的——把真消息当骗局拦,会教人不再相信真正的提醒。" },
+                 zh: "这条是真的——把真消息当骗局拦，会教人不再相信真正的提醒。" },
     truthSafe: { en: "Right call. Not everything is a trap — knowing what's safe matters just as much.",
-                 zh: "判得对。不是一切都是陷阱——分得清什么安全,同样重要。" },
+                 zh: "判得对。不是一切都是陷阱——分得清什么安全，同样重要。" },
   },
   {
     answer: "scam", risk: 8000,
@@ -476,7 +476,7 @@ The money is already in your QuickPay balance. No action needed.`,
     chan: { en: "Dating app → chat", zh: "交友软件 → 私聊" },
     sender: {
       en: 'Sender — <b>“Daniel”</b>, matched three weeks ago, never met in person',
-      zh: '发件人 — <b>「Daniel」</b>,三周前匹配,从未线下见过面',
+      zh: '发件人 — <b>「Daniel」</b>，三周前匹配，从未线下见过面',
     },
     text: {
       en: `I hate seeing you stressed about money. My uncle runs a private
@@ -484,24 +484,24 @@ crypto fund — I'm already up 12% this week, look at my dashboard.
 
 I can guide you, but the bonus window closes tonight. Start with $8,000
 and I'll walk you through every step. Trust me, I'd never let you lose.`,
-      zh: `看你为钱发愁,我心疼。我叔叔管着一只私募加密基金——
-这周我已经赚了 12%,看我的后台截图。
+      zh: `看你为钱发愁，我心疼。我叔叔管着一只私募加密基金——
+这周我已经赚了 12%，看我的后台截图。
 
-我可以一步步带你,但加成窗口今晚就关。先投 ¥8,000,我全程教你。
-相信我,我绝不会让你亏。`,
+我可以一步步带你，但加成窗口今晚就关。先投 ¥8,000，我全程教你。
+相信我，我绝不会让你亏。`,
     },
     flags: [
       { en: "A “pig-butchering” pattern: romance first, then a can't-lose investment.",
-        zh: "「杀猪盘」套路:先谈感情,再推一个稳赚不赔的投资。" },
+        zh: "「杀猪盘」套路：先谈感情，再推一个稳赚不赔的投资。" },
       { en: "Never met in person, yet steering you to send a very large sum.",
-        zh: "从未线下见面,却引导你转出一大笔钱。" },
+        zh: "从未线下见面，却引导你转出一大笔钱。" },
       { en: "Faked profit screenshots plus a closing “bonus window” to force a fast yes.",
-        zh: "伪造的盈利截图,加上即将关闭的「加成窗口」,逼你快速点头。" },
+        zh: "伪造的盈利截图，加上即将关闭的「加成窗口」，逼你快速点头。" },
     ],
     truthScam: { en: "Romance-investment scams are among the costliest of all. The platform is fake; deposits vanish.",
-                 zh: "杀猪盘是损失最惨重的骗局之一。平台是假的,入金即蒸发。" },
+                 zh: "杀猪盘是损失最惨重的骗局之一。平台是假的，入金即蒸发。" },
     truthSafe: { en: "It was a scam — you just stopped an $8,000 loss and a breaking heart.",
-                 zh: "这是骗局——你刚拦下了 ¥8,000 的损失,和一颗将碎的心。" },
+                 zh: "这是骗局——你刚拦下了 ¥8,000 的损失，和一颗将碎的心。" },
   },
   {
     answer: "scam", risk: 1500,
@@ -509,7 +509,7 @@ and I'll walk you through every step. Trust me, I'd never let you lose.`,
     chan: { en: "Work IM", zh: "工作群消息" },
     sender: {
       en: 'Sender — <b>“Karen Watts, CEO”</b>, a new account whose photo matches the boss',
-      zh: '发件人 — <b>「Karen Watts,CEO」</b>,一个头像与老板相同的新账号',
+      zh: '发件人 — <b>「Karen Watts,CEO」</b>，一个头像与老板相同的新账号',
     },
     text: {
       en: `Hi — stuck in an investor meeting, can't talk. Quick favour: buy
@@ -517,27 +517,27 @@ and I'll walk you through every step. Trust me, I'd never let you lose.`,
 
 Keep this between us for now; I'll approve the reimbursement after.
 You're a lifesaver.`,
-      zh: `在吗——正开投资人会议,不方便讲话。帮个急忙:买
-5 张 300 元的礼品卡做客户答谢,把卡密发我。
+      zh: `在吗——正开投资人会议，不方便讲话。帮个急忙：买
+5 张 300 元的礼品卡做客户答谢，把卡密发我。
 
-先别跟别人说,回头我批报销。你真是帮了大忙。`,
+先别跟别人说，回头我批报销。你真是帮了大忙。`,
     },
     flags: [
       { en: "Authority, urgency and secrecy — the three levers of a “CEO fraud”.",
         zh: "权威、紧迫、保密——「冒充领导」骗局的三根杠杆。" },
       { en: "Payment as gift-card codes: untraceable, irreversible, never a real company process.",
-        zh: "用礼品卡卡密付款:无法追踪、无法撤回,绝非真实的公司流程。" },
+        zh: "用礼品卡卡密付款：无法追踪、无法撤回，绝非真实的公司流程。" },
       { en: "“New account” and “can't talk now” neatly block you from verifying by voice.",
-        zh: "「新账号」加「现在不方便讲话」,刚好堵死你电话核实的路。" },
+        zh: "「新账号」加「现在不方便讲话」，刚好堵死你电话核实的路。" },
     ],
     truthScam: { en: "A business-impersonation (BEC) scam. The fix: call the boss back on a number you already know.",
-                 zh: "冒充高管(BEC)骗局。破解:用你早已知道的号码,回拨老板核实。" },
+                 zh: "冒充高管（BEC）骗局。破解：用你早已知道的号码，回拨老板核实。" },
     truthSafe: { en: "It was a scam — a confidential gift-card request is almost always fraud.",
-                 zh: "这是骗局——要求保密的礼品卡请求,几乎都是诈骗。" },
+                 zh: "这是骗局——要求保密的礼品卡请求，几乎都是诈骗。" },
   },
   {
     answer: "safe", risk: 2000,
-    title: { en: "The Call That Says No", zh: "那通说“不”的电话" },
+    title: { en: "The Call That Says No", zh: "那通说「不」的电话" },
     chan: { en: "Phone call · transcript", zh: "来电 · 通话记录" },
     sender: {
       en: "Source — the number printed on the back of the customer's own card",
@@ -549,24 +549,24 @@ We will never ask for your PIN or a one-time code.
 
 Please don't read any code to anyone. To continue, hang up and call us
 back using the number on the back of your card.”`,
-      zh: `「这里是北岸银行反诈团队。我们拦下了一笔 ¥2,000 的扣款,怀疑不是您本人。
+      zh: `「这里是北岸银行反诈团队。我们拦下了一笔 ¥2,000 的扣款，怀疑不是您本人。
 我们绝不会向您索要密码或一次性验证码。
 
-请不要把任何验证码读给任何人。如需继续,请挂断,
+请不要把任何验证码读给任何人。如需继续，请挂断，
 用您卡片背面的号码回拨我们。」`,
     },
     flags: [
       { en: "It says outright it will never ask for your code — the opposite of a scammer.",
         zh: "它直截了当地说绝不会要你的验证码——和骗子恰恰相反。" },
       { en: "No link, no pressure to pay; it sends you to the official number to verify.",
-        zh: "没有链接、不催你付款;反而让你用官方号码去核实。" },
+        zh: "没有链接、不催你付款；反而让你用官方号码去核实。" },
       { en: "“Hang up and call the number on your card” is exactly the safe habit to build.",
-        zh: "「挂断,用卡背号码回拨」正是该养成的安全习惯。" },
+        zh: "「挂断，用卡背号码回拨」正是该养成的安全习惯。" },
     ],
     truthScam: { en: "It was genuine — over-blocking means the next real fraud alert gets ignored.",
-                 zh: "这是真的——过度拦截,意味着下一次真正的反诈提醒会被忽视。" },
+                 zh: "这是真的——过度拦截，意味着下一次真正的反诈提醒会被忽视。" },
     truthSafe: { en: "Right call. The mark of a real bank: it tells you to verify it through official channels.",
-                 zh: "判得对。真银行的标志:它让你通过官方渠道去核实它自己。" },
+                 zh: "判得对。真银行的标志：它让你通过官方渠道去核实它自己。" },
   },
 ];
 
