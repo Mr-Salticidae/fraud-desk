@@ -1,37 +1,89 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" font-family="Georgia, 'Songti SC', serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675"
+     font-family="'Fraunces', Georgia, 'Songti SC', serif">
+  <defs>
+    <filter id="paperGrain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.04 0"/>
+      <feComposite operator="over" in2="SourceGraphic"/>
+    </filter>
+    <linearGradient id="cardShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#e9ddc8" stop-opacity="0.35"/>
+    </linearGradient>
+  </defs>
+
   <!-- paper -->
   <rect width="1200" height="675" fill="#f3ede1"/>
-  <rect x="28" y="28" width="1144" height="619" fill="#fbf7ee" stroke="#d8cdb9"/>
+  <rect width="1200" height="675" fill="#f3ede1" filter="url(#paperGrain)"/>
+  <rect x="26" y="26" width="1148" height="623" fill="#fbf7ee" stroke="#d8cdb9" stroke-width="1.5"/>
+
+  <!-- masthead kickers -->
+  <text x="74" y="92" font-family="'Inter', Arial, sans-serif" font-size="18" letter-spacing="5" fill="#7a7063">AN INTERACTIVE DOSSIER · 互动反诈调查档案</text>
+  <text x="1126" y="92" text-anchor="end" font-family="'Inter', Arial, sans-serif" font-size="18" letter-spacing="5" fill="#a72b22">THIS IS A DEMO</text>
 
   <!-- masthead rules -->
   <g stroke="#1c1813">
-    <line x1="80" y1="120" x2="1120" y2="120" stroke-width="1"/>
-    <line x1="80" y1="210" x2="1120" y2="210" stroke-width="1"/>
-    <line x1="80" y1="216" x2="1120" y2="216" stroke-width="3"/>
+    <line x1="74" y1="108" x2="1126" y2="108" stroke-width="1"/>
   </g>
 
-  <!-- kickers -->
-  <text x="80" y="104" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="5" fill="#7a7063">AN INTERACTIVE DOSSIER · 互动反诈调查档案</text>
-  <text x="1120" y="104" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="5" fill="#a72b22">THIS IS A DEMO</text>
-
   <!-- wordmark -->
-  <text x="600" y="192" text-anchor="middle" font-size="78" font-weight="900" fill="#1c1813" letter-spacing="-1">THE FRAUD <tspan font-style="italic" font-weight="500" fill="#a72b22">DESK</tspan></text>
-  <text x="600" y="262" text-anchor="middle" font-size="30" font-style="italic" fill="#7a7063">《反诈柜台》— 在他们点下去之前，拦住它。</text>
+  <text x="74" y="196" font-size="84" font-weight="900" fill="#1c1813" letter-spacing="-2">THE FRAUD <tspan font-style="italic" font-weight="500" fill="#a72b22">DESK</tspan></text>
+  <g stroke="#1c1813">
+    <line x1="74" y1="222" x2="1126" y2="222" stroke-width="1"/>
+    <line x1="74" y1="228" x2="1126" y2="228" stroke-width="3.5"/>
+  </g>
+  <text x="74" y="266" font-size="27" font-style="italic" fill="#7a7063">《反诈柜台》— 一款反诈版《Papers, Please》</text>
 
-  <!-- headline -->
-  <text x="80" y="372" font-size="62" font-weight="900" fill="#1c1813" letter-spacing="-1">Spot the scam.</text>
-  <text x="80" y="442" font-size="62" font-weight="900" fill="#1c1813" letter-spacing="-1">Save the savings.</text>
-  <text x="80" y="506" font-size="26" font-family="Inter, Arial, sans-serif" fill="#7a7063">五十秒一桩 · 中国高发电诈剧本 · 中英双语 · 点开即玩</text>
+  <!-- LEFT: headline -->
+  <text x="74" y="372" font-size="62" font-weight="900" fill="#1c1813" letter-spacing="-1.5">Spot the scam.</text>
+  <text x="74" y="438" font-size="62" font-weight="900" fill="#a72b22" letter-spacing="-1.5">Save the savings.</text>
 
-  <!-- rubber stamp -->
-  <g transform="translate(940 430) rotate(-9)" fill="none">
-    <rect x="-118" y="-46" width="236" height="92" rx="6" stroke="#a72b22" stroke-width="6" opacity="0.92"/>
-    <rect x="-110" y="-38" width="220" height="76" rx="3" stroke="#a72b22" stroke-width="2" opacity="0.45"/>
-    <text x="0" y="20" text-anchor="middle" font-size="58" font-weight="900" fill="#a72b22" letter-spacing="3" opacity="0.92">FRAUD</text>
+  <text x="74" y="500" font-size="21" font-family="'Inter', Arial, sans-serif" fill="#4a4338">夜班反诈分析员 · 逐条审查可疑短信 / 转账 / 来电</text>
+  <text x="74" y="530" font-size="21" font-family="'Inter', Arial, sans-serif" fill="#4a4338">放行还是拦截 · 25 秒一桩 · 中英双语 · 点开即玩</text>
+
+  <!-- LEFT: feature chips -->
+  <g font-family="'Inter', Arial, sans-serif" font-size="14" letter-spacing="1.5" fill="#9c7320">
+    <rect x="74"  y="556" width="150" height="30" rx="2" fill="none" stroke="#d8cdb9"/>
+    <text x="149" y="576" text-anchor="middle">16 桩真实剧本</text>
+    <rect x="234" y="556" width="120" height="30" rx="2" fill="none" stroke="#d8cdb9"/>
+    <text x="294" y="576" text-anchor="middle">止损计分</text>
+    <rect x="364" y="556" width="150" height="30" rx="2" fill="none" stroke="#d8cdb9"/>
+    <text x="439" y="576" text-anchor="middle">国家反诈中心取材</text>
+  </g>
+
+  <!-- RIGHT: exhibit card — a sample scam SMS -->
+  <g transform="translate(706 318)">
+    <rect x="0" y="0" width="420" height="284" rx="4" fill="url(#cardShade)" stroke="#d8cdb9" stroke-width="1.5"/>
+    <rect x="0" y="0" width="420" height="284" rx="4" fill="none" stroke="#1c1813" stroke-width="1" stroke-dasharray="2 5" opacity="0.25"/>
+
+    <!-- exhibit tab -->
+    <rect x="22" y="-14" width="268" height="28" fill="#1c1813"/>
+    <text x="34" y="5" font-family="'Inter', Arial, sans-serif" font-size="13" letter-spacing="2.5" fill="#f3ede1">EXHIBIT A — TRANSCRIPT</text>
+
+    <text x="28" y="58" font-family="'Inter', Arial, sans-serif" font-size="13" letter-spacing="2" fill="#7a7063">SENDER · 955XX 客服专线</text>
+    <line x1="28" y1="72" x2="392" y2="72" stroke="#d8cdb9"/>
+
+    <text font-family="'Inter', Arial, sans-serif" font-size="16.5" fill="#1c1813">
+      <tspan x="28" y="104">【XX 银行】您的账户存在异常，</tspan>
+      <tspan x="28" y="132">涉嫌洗钱已被冻结。请点击链接</tspan>
+      <tspan x="28" y="160">核验身份并转入"安全账户"，</tspan>
+      <tspan x="28" y="188">逾期将移交公安机关处理。</tspan>
+      <tspan x="28" y="216" fill="#a72b22">▶ http://icbc-safe-verify.cn/login</tspan>
+    </text>
+
+    <text x="28" y="256" font-family="'Inter', Arial, sans-serif" font-size="13" letter-spacing="1" fill="#7a7063">AT RISK</text>
+    <text x="392" y="256" text-anchor="end" font-family="'Inter', Arial, sans-serif" font-weight="700" font-size="17" fill="#a72b22">¥ 48,000</text>
+
+    <!-- rubber FRAUD stamp -->
+    <g transform="translate(300 150) rotate(-11)" fill="none" opacity="0.92">
+      <rect x="-120" y="-44" width="240" height="88" rx="6" stroke="#a72b22" stroke-width="6"/>
+      <rect x="-112" y="-36" width="224" height="72" rx="3" stroke="#a72b22" stroke-width="2" opacity="0.5"/>
+      <text x="0" y="20" text-anchor="middle" font-size="56" font-weight="900" fill="#a72b22" letter-spacing="4">FRAUD</text>
+    </g>
   </g>
 
   <!-- bottom rule + colophon -->
-  <line x1="80" y1="556" x2="1120" y2="556" stroke="#d8cdb9" stroke-width="1"/>
-  <text x="80" y="590" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="2" fill="#7a7063">A vertical slice · The Demo Jam 2026 · vibe-coded with Claude Code</text>
-  <text x="1120" y="590" text-anchor="end" font-family="ui-monospace, monospace" font-size="18" fill="#9c7320">No. 01 — NIGHT SHIFT</text>
+  <line x1="74" y1="612" x2="1126" y2="612" stroke="#d8cdb9" stroke-width="1"/>
+  <text x="74" y="638" font-family="'Inter', Arial, sans-serif" font-size="14" letter-spacing="2" fill="#7a7063">A vertical slice · The Demo Jam 2026 · vibe-coded with Claude Code</text>
+  <text x="1126" y="638" text-anchor="end" font-family="ui-monospace, 'Courier New', monospace" font-size="14" fill="#9c7320">No. 01 — NIGHT SHIFT</text>
 </svg>
