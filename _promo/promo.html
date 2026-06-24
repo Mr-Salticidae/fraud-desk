@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,900;1,9..144,500&family=Inter:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#f3ede1; --card:#fbf7ee; --ink:#1c1813; --muted:#7a7063;
+    --line:#d8cdb9; --red:#a72b22; --green:#2f6b4f; --gold:#9c7320;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{background:#ffffff;}
+  .serif{font-family:'Fraunces','Noto Serif SC',Georgia,serif;}
+  .sans{font-family:'Inter','Noto Sans SC',sans-serif;}
+
+  .card{
+    display:none; width:1080px; height:1440px; position:relative;
+    background:radial-gradient(120% 70% at 50% -10%, #f7f1e6 0%, var(--paper) 55%), var(--paper);
+    color:var(--ink); font-family:'Inter','Noto Sans SC',sans-serif; overflow:hidden;
+  }
+  .card:target{display:block;}
+  .frame{position:absolute; inset:40px; border:2px solid var(--line); background:rgba(251,247,238,.45);}
+  .pad{position:absolute; inset:40px; padding:76px 80px; display:flex; flex-direction:column;}
+
+  .kick{font-size:26px; letter-spacing:.28em; text-transform:uppercase; color:var(--muted); font-weight:600;}
+  .kick .red{color:var(--red);}
+  .topline{display:flex; justify-content:space-between; align-items:baseline;}
+  .hr{height:2px; background:var(--ink); margin:22px 0;}
+  .hr.thin{height:1px; background:var(--line);}
+  .hr.dbl{height:7px; border-top:2px solid var(--ink); border-bottom:5px solid var(--ink); background:transparent;}
+
+  .wordmark{font-size:64px; font-weight:900; letter-spacing:-.02em; color:var(--ink);}
+  .wordmark em{font-style:italic; font-weight:500; color:var(--red);}
+  .sub{font-size:30px; color:var(--muted); margin-top:14px; line-height:1.5;}
+
+  .h-zh{font-weight:900; color:var(--ink); line-height:1.12; letter-spacing:-.01em;}
+  .red{color:var(--red);}
+  .grn{color:var(--green);}
+
+  /* stamp */
+  .stamp{display:inline-block; transform:rotate(-9deg); border:7px solid var(--red); color:var(--red);
+    font-weight:900; font-size:84px; letter-spacing:.06em; padding:12px 40px;
+    box-shadow:inset 0 0 0 3px rgba(167,43,34,.18); opacity:.92;}
+
+  /* evidence card */
+  .ev{border:2px solid var(--line); background:linear-gradient(#fff8,#e9ddc855); padding:38px 40px; position:relative;}
+  .ev .tab{position:absolute; top:-26px; left:30px; background:var(--ink); color:var(--paper);
+    font-size:20px; letter-spacing:.18em; padding:8px 18px;}
+  .ev .from{font-size:22px; color:var(--muted); letter-spacing:.06em;}
+  .ev .msg{font-size:30px; line-height:1.7; margin-top:18px;}
+  .ev .risk{display:flex; justify-content:space-between; align-items:baseline; margin-top:24px; border-top:1px solid var(--line); padding-top:18px;}
+  .ev .risk .l{font-size:20px; letter-spacing:.2em; color:var(--muted); text-transform:uppercase;}
+  .ev .risk .v{font-size:34px; font-weight:700; color:var(--red);}
+
+  ul.feat{list-style:none; margin-top:8px;}
+  ul.feat li{display:flex; gap:22px; align-items:flex-start; padding:22px 0; border-bottom:1px solid var(--line); font-size:32px; line-height:1.45;}
+  ul.feat li .n{font-family:'Inter',monospace; color:var(--red); font-weight:700; font-size:26px; flex:none; padding-top:4px;}
+
+  .spacer{flex:1;}
+  .foot{font-size:24px; color:var(--muted); letter-spacing:.06em;}
+  .search{border:2px dashed var(--gold); padding:30px 34px; margin-top:8px;}
+  .search .lbl{font-size:22px; letter-spacing:.2em; color:var(--gold); text-transform:uppercase;}
+  .search .kw{font-size:40px; font-weight:800; color:var(--ink); margin-top:10px; line-height:1.4;}
+  .search .kw b{color:var(--red);}
+  .pill{display:inline-block; border:2px solid var(--line); border-radius:6px; padding:10px 20px; font-size:24px; color:var(--gold); margin:8px 12px 0 0;}
+</style>
+</head>
+<body>
+
+<!-- ================= CARD 1 — COVER ================= -->
+<section id="c1" class="card">
+  <div class="frame"></div>
+  <div class="pad">
+    <div class="topline">
+      <span class="kick">AIGC × 反诈公益</span>
+      <span class="kick red">THIS IS A DEMO</span>
+    </div>
+    <div class="hr"></div>
+
+    <div style="margin-top:48px;">
+      <div class="h-zh serif" style="font-size:128px;">我用 AI</div>
+      <div class="h-zh serif" style="font-size:128px;">做了一款</div>
+      <div class="h-zh serif" style="font-size:128px;"><span class="red">反诈游戏</span></div>
+    </div>
+
+    <div class="sub" style="margin-top:40px; font-size:34px;">不会写代码，全程和 AI 对话<br/>一句句自然语言 → 一个能玩的游戏</div>
+
+    <div class="spacer"></div>
+
+    <div style="position:absolute; right:120px; top:860px;">
+      <span class="stamp">SCAM?</span>
+    </div>
+
+    <div class="hr dbl"></div>
+    <div class="wordmark serif" style="font-size:60px;">The Fraud <em>Desk</em> <span style="font-weight:700;color:var(--ink);">《反诈柜台》</span></div>
+    <div class="sub" style="font-size:30px; margin-top:18px;">200 桩真实诈骗剧本 · 中英双语 · 点开即玩</div>
+    <div class="foot" style="margin-top:30px;">vibe coding · 用 Claude Code 做出来的</div>
+  </div>
+</section>
+
+<!-- ================= CARD 2 — WHAT ================= -->
+<section id="c2" class="card">
+  <div class="frame"></div>
+  <div class="pad">
+    <div class="topline"><span class="kick">玩法 ｜ 这是什么</span><span class="kick">No. 01</span></div>
+    <div class="hr"></div>
+
+    <div class="h-zh serif" style="font-size:76px; margin-top:24px;">反诈版</div>
+    <div class="h-zh serif" style="font-size:76px;"><span class="red">《Papers, Please》</span></div>
+
+    <div class="sub" style="font-size:34px; color:var(--ink); margin-top:30px; line-height:1.65;">
+      你是夜班反诈分析员，逐条审查可疑的<br/>短信 / 转账 / 来电——<b>25 秒内</b>裁定：<br/>放行，还是拦截？
+    </div>
+
+    <div class="ev" style="margin-top:56px;">
+      <span class="tab sans">EXHIBIT A — 短信记录</span>
+      <div class="from sans">发件人 · 955XX「客服专线」</div>
+      <div class="msg">【XX银行】您的账户涉嫌洗钱已被冻结，请点击链接核验身份并转入"安全账户"…</div>
+      <div class="risk"><span class="l sans">AT RISK</span><span class="v sans">¥ 48,000</span></div>
+      <div style="position:absolute; right:40px; bottom:96px;"><span class="stamp" style="font-size:60px; padding:8px 28px;">FRAUD</span></div>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="hr thin"></div>
+    <div class="sub serif" style="font-size:36px; font-style:italic; color:var(--ink);">识破破绽，救下那个差点被骗的人。</div>
+  </div>
+</section>
+
+<!-- ================= CARD 3 — HOW (vibe coding) ================= -->
+<section id="c3" class="card">
+  <div class="frame"></div>
+  <div class="pad">
+    <div class="topline"><span class="kick">怎么做的 ｜ <span class="red">vibe coding</span></span><span class="kick">No. 02</span></div>
+    <div class="hr"></div>
+
+    <div class="h-zh serif" style="font-size:64px; margin-top:24px; line-height:1.18;">一句句自然语言，<br/>变成一个<span class="red">能玩的游戏</span></div>
+
+    <ul class="feat" style="margin-top:44px;">
+      <li><span class="n">01</span><span><b>不手写框架</b>：描述玩法和规则，AI 直接出代码、出界面</span></li>
+      <li><span class="n">02</span><span><b>数据驱动</b>：200 桩案件存在一个数组里，加剧本只填一条</span></li>
+      <li><span class="n">03</span><span><b>真实取材</b>：改编自国家反诈中心公开科普，中英双语</span></li>
+      <li><span class="n">04</span><span><b>已上线</b>：浏览器打开即玩，挂在自己的小站上</span></li>
+    </ul>
+
+    <div class="spacer"></div>
+    <div class="hr thin"></div>
+    <div class="sub serif" style="font-size:38px; font-style:italic; color:var(--ink);">零门槛——有想法，就能把它做出来。</div>
+  </div>
+</section>
+
+<!-- ================= CARD 4 — CTA ================= -->
+<section id="c4" class="card">
+  <div class="frame"></div>
+  <div class="pad">
+    <div class="topline"><span class="kick">来玩 ｜ 公益反诈</span><span class="kick red">FREE</span></div>
+    <div class="hr"></div>
+
+    <div class="h-zh serif" style="font-size:84px; margin-top:32px; line-height:1.15;">打开就玩，<br/>转给爸妈<br/>也<span class="red">正合适</span></div>
+
+    <div class="search" style="margin-top:56px;">
+      <div class="lbl sans">打开网站 · 直接玩</div>
+      <div class="kw" style="font-size:34px;"><b>tiaozhuxiansheng.com/fraud-desk</b><br/>国内直连不用翻 · 想要思路/源码？评论区扣「1」</div>
+    </div>
+
+    <div style="margin-top:36px;">
+      <span class="pill sans">#vibecoding大赏</span><span class="pill sans">#反诈</span><span class="pill sans">#个人开发者</span><span class="pill sans">#独立开发</span>
+    </div>
+
+    <div class="spacer"></div>
+    <div class="hr dbl"></div>
+    <div class="sub serif" style="font-size:36px; font-style:italic; color:var(--ink);">把反诈意识练成肌肉记忆——<span class="red">免费，人人可用。</span></div>
+    <div class="foot" style="margin-top:26px;">The Fraud Desk · vibe-coded with Claude Code</div>
+  </div>
+</section>
+
+</body>
+</html>
