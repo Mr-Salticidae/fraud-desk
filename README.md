@@ -26,11 +26,22 @@ python -m http.server 5273
 
 或直接双击 `index.html` 也能跑(无需服务器)。
 
-## 文件
+## 文件结构
 
-- `index.html` — 整个游戏(HTML + CSS + JS 全内联,方便 itch.io 单 zip 上传)。
-- 案件库在 `<script>` 顶部的 `LIBRARY` 数组里,**数据驱动**——加新剧本只要往数组里加一条(中英各一套),无需改逻辑。每个班次由 `drawRound()` 随机抽取并保证至少各含一桩"诈/真"。
+常规多文件结构,`index.html` 为入口,适配 itch.io / B站 toy 等静态托管:
+
+```
+fraud-desk/
+├── index.html        (必需，入口文件)
+├── style.css         (全部样式)
+├── script.js         (全部逻辑 + 案件库)
+└── images/
+    └── cover.svg     (封面，可导出 PNG/JPG 替换)
+```
+
+- 案件库在 `script.js` 顶部的 `LIBRARY` 数组里,**数据驱动**——加新剧本只要往数组里加一条(中英各一套),无需改逻辑。每个班次由 `drawRound()` 随机抽取并保证至少各含一桩"诈/真"。
 - 决策倒计时秒数由常量 `DECISION_SECONDS`(默认 25)控制。
+- 字体走 Google Fonts CDN(Fraunces / Inter),离线或被墙时优雅降级到系统衬线。`images/cover.svg` 是占位封面,可换成你自己的图。
 
 ## 提交到 itch.io(jam 合规清单)
 

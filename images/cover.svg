@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" font-family="Georgia, 'Songti SC', serif">
+  <!-- paper -->
+  <rect width="1200" height="675" fill="#f3ede1"/>
+  <rect x="28" y="28" width="1144" height="619" fill="#fbf7ee" stroke="#d8cdb9"/>
+
+  <!-- masthead rules -->
+  <g stroke="#1c1813">
+    <line x1="80" y1="120" x2="1120" y2="120" stroke-width="1"/>
+    <line x1="80" y1="210" x2="1120" y2="210" stroke-width="1"/>
+    <line x1="80" y1="216" x2="1120" y2="216" stroke-width="3"/>
+  </g>
+
+  <!-- kickers -->
+  <text x="80" y="104" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="5" fill="#7a7063">AN INTERACTIVE DOSSIER · 互动反诈调查档案</text>
+  <text x="1120" y="104" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="5" fill="#a72b22">THIS IS A DEMO</text>
+
+  <!-- wordmark -->
+  <text x="600" y="192" text-anchor="middle" font-size="78" font-weight="900" fill="#1c1813" letter-spacing="-1">THE FRAUD <tspan font-style="italic" font-weight="500" fill="#a72b22">DESK</tspan></text>
+  <text x="600" y="262" text-anchor="middle" font-size="30" font-style="italic" fill="#7a7063">《反诈柜台》— 在他们点下去之前，拦住它。</text>
+
+  <!-- headline -->
+  <text x="80" y="372" font-size="62" font-weight="900" fill="#1c1813" letter-spacing="-1">Spot the scam.</text>
+  <text x="80" y="442" font-size="62" font-weight="900" fill="#1c1813" letter-spacing="-1">Save the savings.</text>
+  <text x="80" y="506" font-size="26" font-family="Inter, Arial, sans-serif" fill="#7a7063">五十秒一桩 · 中国高发电诈剧本 · 中英双语 · 点开即玩</text>
+
+  <!-- rubber stamp -->
+  <g transform="translate(940 430) rotate(-9)" fill="none">
+    <rect x="-118" y="-46" width="236" height="92" rx="6" stroke="#a72b22" stroke-width="6" opacity="0.92"/>
+    <rect x="-110" y="-38" width="220" height="76" rx="3" stroke="#a72b22" stroke-width="2" opacity="0.45"/>
+    <text x="0" y="20" text-anchor="middle" font-size="58" font-weight="900" fill="#a72b22" letter-spacing="3" opacity="0.92">FRAUD</text>
+  </g>
+
+  <!-- bottom rule + colophon -->
+  <line x1="80" y1="556" x2="1120" y2="556" stroke="#d8cdb9" stroke-width="1"/>
+  <text x="80" y="590" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="2" fill="#7a7063">A vertical slice · The Demo Jam 2026 · vibe-coded with Claude Code</text>
+  <text x="1120" y="590" text-anchor="end" font-family="ui-monospace, monospace" font-size="18" fill="#9c7320">No. 01 — NIGHT SHIFT</text>
+</svg>

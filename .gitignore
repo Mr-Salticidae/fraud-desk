@@ -1,6 +1,9 @@
 # Local preview / editor config (contains machine-specific absolute paths)
 .claude/
 
+# build artifacts (upload packages)
+*.zip
+
 # OS / editor cruft
 Thumbs.db
 .DS_Store
