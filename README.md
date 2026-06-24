@@ -40,6 +40,15 @@ python -m http.server 5273
 - [ ] 打包:把 `index.html` zip 后上传,itch 后台勾选 "This file will be played in the browser"
 - [ ] 游戏页简介里点明"这是更大项目的 Demo"
 
+## 设计 / Design
+
+"暖纸调案件档案(Case File Dossier)"——把游戏包装成一本**互动调查档案**,走高端编辑/杂志风:
+
+- 字体:**Fraunces**(高对比衬线,大标题/抽引语/首字下沉) + **Inter**(正文/UI 眉题),系统衬线兜底。
+- 配色:暖奶油纸 `#f3ede1` + 暖墨黑 `#1c1813` + 图章红 `#a72b22` + 核验绿 `#2f6b4f` + 物证赭 `#9c7320`。
+- 编辑工艺:双线报头、眉题 kicker、案件编号(`CASE 01 / 05`)、物证标签(`EXHIBIT A — TRANSCRIPT`)、首字下沉、橡皮**图章判定**(BLOCKED/CLEARED/MISSED)、抽引语点题、版权页 colophon、Müller-Brockmann 式细线网格。
+- 每个案件有编辑式标题(如《三十分钟冻结术》),中英各一套。
+
 ## 双语(中 / EN)
 
 - 顶部 `EN / 中` 开关一键切换,**实时重渲染**当前画面,分数不丢、不重复计分。
