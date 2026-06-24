@@ -36,12 +36,13 @@ fraud-desk/
 ├── style.css         (全部样式)
 ├── script.js         (全部逻辑 + 案件库)
 └── images/
-    └── cover.svg     (封面，可导出 PNG/JPG 替换)
+    ├── cover.svg / cover.png         (itch.io 封面，630×500)
+    └── cover-toy.svg / cover-toy.png (B站 toy 封面，4:3 / 800×600)
 ```
 
 - 案件库在 `script.js` 顶部的 `LIBRARY` 数组里,**数据驱动**——加新剧本只要往数组里加一条(中英各一套),无需改逻辑。每个班次由 `drawRound()` 随机抽取并保证至少各含一桩"诈/真"。
 - 决策倒计时秒数由常量 `DECISION_SECONDS`(默认 25)控制。
-- 字体走 Google Fonts CDN(Fraunces / Inter),离线或被墙时优雅降级到系统衬线。`images/cover.svg` 是占位封面,可换成你自己的图。
+- 字体走 Google Fonts CDN(Fraunces / Inter),离线或被墙时优雅降级到系统衬线。封面 SVG 是矢量源(单独打开优雅降级到系统衬线),配套 PNG 由浏览器加载 Fraunces/Inter 渲染导出(itch 用 630×500,B站 toy 用 4:3)。
 
 ## 提交到 itch.io(jam 合规清单)
 
