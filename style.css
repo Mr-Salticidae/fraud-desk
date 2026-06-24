@@ -203,12 +203,51 @@
   .hidden { display: none !important; }
 
   /* ---------- Multi-platform (Bilibili toy responsive guide) ---------- */
-  /* Phone: single column, content-priority, tighter gutters */
+  /* Phone: single full-height column, content-priority, bottom operation area.
+     The whole app fits one screen; only the long message scrolls inside itself. */
   @media (max-width: 600px) {
-    .masthead, main, .screen, .ledger, .colophon { padding-left: 18px; padding-right: 18px; }
-    .wordmark { font-size: 26px; } .cover-title { font-size: 32px; } .case-title { font-size: 23px; }
-    .grade { font-size: 56px; } .lede::first-letter { font-size: 52px; }
+    body {
+      align-items: stretch;
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    }
+    .app { min-height: 100dvh; display: flex; flex-direction: column; border: 0; box-shadow: none; }
+    .app::before { display: none; }
+
+    .masthead { padding: 8px 16px 6px; }
+    .mast-top { font-size: 9px; padding-bottom: 5px; }
+    .wordmark { font-size: 21px; margin: 5px 0 4px; }
+    .mast-meta { padding-top: 5px; font-size: 9px; }
+    .ledger { padding: 0 16px; }
+    .ledger .v { font-size: 16px; }
+    main, .screen { padding: 12px 16px 14px; }
+
+    /* case screen = flexible column; the exhibit caps its height and scrolls inside */
+    #caseScreen { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+    .case-head .ticks i { width: 12px; }
+    .case-title { font-size: 20px; margin: 8px 0 10px; }
+    .exhibit { font-size: 14.5px; line-height: 1.55; padding: 12px 14px; max-height: 30dvh; overflow-y: auto; }
+    #caseScreen.decided .exhibit { max-height: 15dvh; }
+    .sender { margin-top: 7px; }
+    .atrisk { margin: 12px 0 2px; } .atrisk .fig { font-size: 20px; }
+    .timer { margin: 12px 0 2px; }
+    .ruling-prompt { margin: 12px 0 8px; }
     .actions { gap: 12px; }
+    .act { padding: 13px 10px; } .act .big { font-size: 18px; }
+    .hint { margin-top: 8px; font-size: 11px; }
+    .verdict { margin-top: 12px; padding-top: 12px; }
+    .stamp { font-size: 20px; }
+    .tells li { padding: 5px 0 5px 32px; font-size: 13px; line-height: 1.45; }
+    .pull { font-size: 16px; margin: 12px 0 4px; }
+    .next-wrap { margin-top: 14px; }
+
+    /* intro / report compaction */
+    .cover-title { font-size: 30px; }
+    .dek { font-size: 16px; margin: 10px 0 12px; }
+    .lede { line-height: 1.6; } .lede::first-letter { font-size: 48px; }
+    .contents { margin-top: 16px; padding-top: 10px; }
+    .grade { font-size: 52px; } .grade-row { gap: 12px; margin: 4px 0 10px; }
+
+    .colophon { display: none; }   /* demo notice still shown by the masthead badge */
   }
   /* Touch devices: larger tap targets (>=44px), no hover reliance */
   @media (pointer: coarse) {

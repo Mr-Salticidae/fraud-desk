@@ -608,6 +608,7 @@ function paintCase() {
 
 function renderCase() {
   state.decided = false;
+  $("caseScreen").classList.remove("decided");
   paintCase();
   $("caseActions").classList.remove("hidden");
   $("rulingPrompt").classList.remove("hidden");
@@ -638,6 +639,7 @@ function renderVerdict() {
   const timedOut = state.lastChoice === "timeout";
   const right = !timedOut && state.lastChoice === c.answer;
 
+  $("caseScreen").classList.add("decided");
   $("caseActions").classList.add("hidden");
   $("rulingPrompt").classList.add("hidden");
   $("caseHint").classList.add("hidden");
