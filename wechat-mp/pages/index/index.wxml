@@ -1,0 +1,129 @@
+<view class="app">
+
+  <!-- ===== Masthead ===== -->
+  <view class="masthead">
+    <view class="mast-top">
+      <text>{{t.dossierKicker}}</text>
+      <text class="red">{{t.demoBadge}}</text>
+    </view>
+    <view class="rule"></view>
+    <view class="wordmark serif">The Fraud <text class="em">Desk</text></view>
+    <view class="rule double"></view>
+    <view class="mast-meta">
+      <text>{{t.issueMeta}}</text>
+      <view class="lang">
+        <text class="{{lang==='en'?'on':''}}" data-l="en" bindtap="onLang">EN</text>
+        <text class="sep"></text>
+        <text class="{{lang==='zh'?'on':''}}" data-l="zh" bindtap="onLang">中</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- ===== Ledger (hidden on intro) ===== -->
+  <view class="ledger" wx:if="{{screen!=='intro'}}">
+    <view class="cell"><view class="k">{{t.saved}}</view><view class="v saved">{{view.savedStr}}</view></view>
+    <view class="cell"><view class="k">{{t.lost}}</view><view class="v lost">{{view.lostStr}}</view></view>
+    <view class="cell"><view class="k">{{t.callsRight}}</view><view class="v">{{view.accStr}}</view></view>
+  </view>
+
+  <!-- ===== Intro ===== -->
+  <view class="screen" wx:if="{{screen==='intro'}}">
+    <view class="kicker">{{t.introKicker}}</view>
+    <rich-text class="cover-title serif" nodes="{{coverTitleNodes}}"></rich-text>
+    <view class="dek serif">{{t.introDek}}</view>
+    <view class="rule thin"></view>
+    <view class="lede">{{t.introBody}}</view>
+    <view class="begin-wrap">
+      <text class="linkbtn" bindtap="onStart">{{t.startBtn}}</text>
+    </view>
+    <view class="contents">
+      <view class="ct">{{t.introContentsTitle}}</view>
+      <view class="contents-body">{{t.introContentsBody}}</view>
+    </view>
+  </view>
+
+  <!-- ===== Case + Verdict ===== -->
+  <view class="screen" wx:if="{{screen==='case' || screen==='verdict'}}">
+    <view class="case-head">
+      <text class="kicker">{{cv.kicker}}</text>
+      <view class="ticks">
+        <text class="tick {{item?'done':''}}" wx:for="{{ticks}}" wx:key="index"></text>
+      </view>
+    </view>
+    <view class="case-title serif">{{cv.title}}</view>
+
+    <view class="exhibit-tab">{{cv.exhibitTab}}</view>
+    <text class="exhibit" space="nbsp" decode="{{true}}">{{cv.text}}</text>
+    <rich-text class="sender" nodes="{{cv.senderNodes}}"></rich-text>
+
+    <view class="atrisk" wx:if="{{cv.showRisk}}">
+      <text class="lbl">{{t.atRisk}}</text>
+      <text class="fig">{{cv.riskStr}}</text>
+    </view>
+
+    <!-- live case: timer + ruling -->
+    <block wx:if="{{screen==='case'}}">
+      <view class="timer {{timer.low?'low':''}}">
+        <text class="tlabel">{{t.timerLabel}}</text>
+        <view class="track"><view class="fill" style="width:{{timer.pct}}%"></view></view>
+        <text class="secs">{{timer.secs}}</text>
+      </view>
+      <view class="ruling-prompt kicker">{{t.rulingPrompt}}</view>
+      <view class="actions">
+        <view class="act genuine" data-c="safe" bindtap="onRule">
+          <text class="lbl">{{t.btnGenuineLbl}}</text><text class="big serif">{{t.btnGenuine}}</text>
+        </view>
+        <view class="act fraud" data-c="scam" bindtap="onRule">
+          <text class="lbl">{{t.btnFraudLbl}}</text><text class="big serif">{{t.btnFraud}}</text>
+        </view>
+      </view>
+      <view class="hint">{{t.hint}}</view>
+    </block>
+
+    <!-- verdict -->
+    <view class="verdict" wx:if="{{screen==='verdict'}}">
+      <text class="stamp {{vv.ok?'ok':''}}">{{vv.stamp}}</text>
+      <view class="kicker tells-kicker">{{t.tells}}</view>
+      <view class="tells">
+        <view class="tell" wx:for="{{vv.tells}}" wx:key="no">
+          <text class="no">{{item.no}}</text>
+          <text class="tx">{{item.tx}}</text>
+        </view>
+      </view>
+      <view class="pull serif">{{vv.truth}}</view>
+      <view class="next-wrap">
+        <text class="linkbtn" bindtap="onNext">{{vv.last ? t.seeReport : t.next}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- ===== Report ===== -->
+  <view class="screen" wx:if="{{screen==='report'}}">
+    <view class="kicker">{{t.reportKicker}}</view>
+    <view class="grade-row">
+      <text class="grade serif">{{rv.grade}}</text>
+      <text class="grade-line serif">{{rv.gradeLine}}</text>
+    </view>
+    <view class="figs">
+      <view class="cell"><view class="k">{{t.moneySaved}}</view><view class="v saved serif">{{rv.savedStr}}</view></view>
+      <view class="cell"><view class="k">{{t.moneyLost}}</view><view class="v lost serif">{{rv.lostStr}}</view></view>
+      <view class="cell"><view class="k">{{t.accuracy}}</view><view class="v serif">{{rv.accStr}}</view></view>
+    </view>
+    <view class="contents">
+      <view class="ct">{{t.lockTitle}}</view>
+      <view class="lock">
+        <view class="lock-item"><text class="no">01</text><text class="tx">{{t.lockItem1}}</text></view>
+        <view class="lock-item"><text class="no">02</text><text class="tx">{{t.lockItem2}}</text></view>
+        <view class="lock-item"><text class="no">03</text><text class="tx">{{t.lockItem3}}</text></view>
+        <view class="lock-item"><text class="no">04</text><text class="tx">{{t.lockItem4}}</text></view>
+      </view>
+    </view>
+    <view class="mission serif">{{t.mission}}</view>
+    <view class="begin-wrap center">
+      <text class="linkbtn" bindtap="onReplay">{{t.replay}}</text>
+    </view>
+  </view>
+
+  <!-- colophon (intro only) -->
+  <rich-text class="colophon" nodes="{{footerNodes}}" wx:if="{{screen==='intro'}}"></rich-text>
+</view>

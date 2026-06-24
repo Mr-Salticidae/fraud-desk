@@ -1,0 +1,14 @@
+{
+  "pages": ["pages/index/index"],
+  "window": {
+    "navigationBarTitleText": "反诈柜台",
+    "navigationBarBackgroundColor": "#f3ede1",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f3ede1",
+    "backgroundColorTop": "#f3ede1",
+    "enablePullDownRefresh": false
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

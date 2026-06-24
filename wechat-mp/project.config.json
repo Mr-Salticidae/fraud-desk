@@ -1,0 +1,18 @@
+{
+  "description": "The Fraud Desk — 反诈柜台 (WeChat Mini Program port)",
+  "packOptions": { "ignore": [], "include": [] },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "bigPackageSizeSupport": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "latest",
+  "appid": "touristappid",
+  "projectname": "fraud-desk-mp",
+  "condition": {}
+}

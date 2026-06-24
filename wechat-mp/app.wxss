@@ -1,0 +1,7 @@
+page {
+  background: #f3ede1;
+  color: #1c1813;
+  font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.serif { font-family: Georgia, "Songti SC", "STSong", "PingFang SC", serif; }

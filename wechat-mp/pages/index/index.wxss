@@ -1,0 +1,144 @@
+/* The Fraud Desk — mini-program styles (ported from the H5 dossier look).
+   No webfonts on WeChat, so headings fall back to system serif. Units in rpx. */
+
+.app {
+  max-width: 750rpx;
+  margin: 0 auto;
+  background: #fbf7ee;
+  border: 1rpx solid #d8cdb9;
+  min-height: 100vh;
+  padding-bottom: 40rpx;
+}
+
+/* ---------- Masthead ---------- */
+.masthead { padding: 28rpx 40rpx 20rpx; }
+.rule { border-top: 1rpx solid #1c1813; }
+.rule.thin { border-top: 1rpx solid #d8cdb9; }
+.rule.double { border-top: 5rpx double #1c1813; }
+.mast-top, .mast-meta {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 20rpx; letter-spacing: 3rpx; color: #7a7063;
+}
+.mast-top { text-transform: uppercase; padding-bottom: 16rpx; }
+.mast-top .red { color: #a72b22; }
+.mast-meta { padding-top: 14rpx; }
+.wordmark {
+  text-align: center; font-weight: 900; font-size: 62rpx; line-height: 1;
+  margin: 20rpx 0 16rpx; color: #1c1813;
+}
+.wordmark .em { font-style: italic; font-weight: 500; color: #a72b22; }
+.lang { display: flex; align-items: center; }
+.lang text { color: #7a7063; letter-spacing: 2rpx; padding: 6rpx 8rpx; }
+.lang text.on { color: #1c1813; font-weight: 700; text-decoration: underline; }
+.lang .sep { width: 1rpx; height: 20rpx; background: #d8cdb9; padding: 0; }
+
+/* ---------- Ledger ---------- */
+.ledger { display: flex; padding: 0 40rpx; }
+.ledger .cell { flex: 1; text-align: center; padding: 16rpx 6rpx; border-right: 1rpx solid #d8cdb9; }
+.ledger .cell:last-child { border-right: 0; }
+.ledger .k { font-size: 18rpx; letter-spacing: 3rpx; text-transform: uppercase; color: #7a7063; }
+.ledger .v { font-size: 38rpx; font-weight: 600; margin-top: 2rpx; }
+.ledger .v.saved { color: #2f6b4f; }
+.ledger .v.lost { color: #a72b22; }
+
+/* ---------- Editorial bits ---------- */
+.kicker { font-size: 20rpx; letter-spacing: 3rpx; text-transform: uppercase; color: #7a7063; font-weight: 600; }
+.screen { padding: 36rpx 40rpx 30rpx; }
+
+/* ---------- Intro ---------- */
+.cover-title { display: block; font-weight: 900; font-size: 84rpx; line-height: 1.06; color: #1c1813; margin: 12rpx 0 6rpx; }
+.dek { font-size: 36rpx; line-height: 1.55; color: #7a7063; margin: 24rpx 0 28rpx; }
+.lede { font-size: 30rpx; line-height: 1.85; color: #1c1813; margin-top: 24rpx; }
+.begin-wrap { margin: 40rpx 0 10rpx; }
+.begin-wrap.center { text-align: center; }
+.linkbtn {
+  display: inline-block; font-size: 26rpx; font-weight: 700; letter-spacing: 3rpx;
+  text-transform: uppercase; color: #1c1813; border-bottom: 4rpx solid #a72b22; padding: 8rpx 0 10rpx;
+}
+.contents { margin-top: 40rpx; border-top: 1rpx solid #d8cdb9; padding-top: 24rpx; }
+.contents .ct { font-size: 20rpx; letter-spacing: 3rpx; text-transform: uppercase; color: #7a7063; font-weight: 600; }
+.contents-body { font-size: 28rpx; line-height: 1.7; color: #7a7063; margin-top: 14rpx; }
+
+/* ---------- Case ---------- */
+.case-head { display: flex; align-items: center; }
+.ticks { margin-left: auto; display: flex; flex-wrap: wrap; justify-content: flex-end; }
+.tick { width: 26rpx; height: 6rpx; background: #d8cdb9; margin-left: 8rpx; margin-bottom: 6rpx; }
+.tick.done { background: #1c1813; }
+.case-title { font-weight: 900; font-size: 50rpx; line-height: 1.15; margin: 22rpx 0 26rpx; color: #1c1813; }
+.exhibit-tab {
+  display: inline-block; font-size: 20rpx; letter-spacing: 2rpx; text-transform: uppercase; color: #7a7063;
+  border: 1rpx solid #d8cdb9; border-bottom: 0; padding: 8rpx 18rpx; background: #f3ede1;
+}
+.exhibit {
+  display: block; border: 1rpx solid #d8cdb9; background: #f3ede1;
+  padding: 30rpx 32rpx; font-size: 30rpx; line-height: 1.85; color: #1c1813;
+  white-space: pre-wrap; word-break: break-word;
+}
+.sender { display: block; margin-top: 18rpx; }
+
+.atrisk { display: flex; align-items: baseline; margin: 28rpx 0 6rpx; }
+.atrisk .lbl { font-size: 20rpx; letter-spacing: 3rpx; text-transform: uppercase; color: #9c7320; margin-right: 18rpx; }
+.atrisk .fig { font-weight: 600; font-size: 42rpx; color: #1c1813; }
+
+/* ---------- Timer ---------- */
+.timer { display: flex; align-items: center; margin: 34rpx 0 6rpx; }
+.timer .tlabel { font-size: 20rpx; letter-spacing: 3rpx; text-transform: uppercase; color: #7a7063; flex: none; margin-right: 18rpx; }
+.timer .track { flex: 1; height: 8rpx; background: #d8cdb9; position: relative; overflow: hidden; }
+.timer .fill { position: absolute; top: 0; bottom: 0; left: 0; background: #1c1813; }
+.timer .secs { font-size: 24rpx; color: #7a7063; margin-left: 18rpx; min-width: 64rpx; text-align: right; }
+.timer.low .fill { background: #a72b22; }
+.timer.low .secs { color: #a72b22; font-weight: 700; }
+
+/* ---------- Ruling ---------- */
+.ruling-prompt { margin: 32rpx 0 16rpx; }
+.actions { display: flex; }
+.act {
+  flex: 1; text-align: center; padding: 26rpx 16rpx; border: 3rpx solid #1c1813; color: #1c1813;
+}
+.act:first-child { margin-right: 24rpx; }
+.act .lbl { font-size: 22rpx; letter-spacing: 3rpx; text-transform: uppercase; color: #7a7063; }
+.act .big { display: block; font-weight: 900; font-size: 38rpx; margin-top: 6rpx; }
+.act.genuine:active { background: #2f6b4f; border-color: #2f6b4f; color: #fbf7ee; }
+.act.fraud:active { background: #a72b22; border-color: #a72b22; color: #fbf7ee; }
+.act.genuine:active .lbl, .act.fraud:active .lbl { color: #fbf7ee; }
+.hint { font-size: 23rpx; color: #7a7063; margin-top: 22rpx; text-align: center; }
+
+/* ---------- Verdict ---------- */
+.verdict { margin-top: 32rpx; border-top: 5rpx double #1c1813; padding-top: 32rpx; }
+.stamp {
+  display: inline-block; border: 5rpx solid #a72b22; color: #a72b22;
+  font-weight: 900; font-size: 42rpx; letter-spacing: 4rpx; text-transform: uppercase; padding: 8rpx 26rpx;
+}
+.stamp.ok { border-color: #2f6b4f; color: #2f6b4f; }
+.tells-kicker { margin: 32rpx 0 14rpx; }
+.tell { display: flex; padding: 16rpx 0; border-bottom: 1rpx solid rgba(111,101,87,.2); }
+.tell .no { font-size: 22rpx; color: #a72b22; font-weight: 700; margin-right: 22rpx; flex: none; }
+.tell .tx { font-size: 28rpx; line-height: 1.6; color: #1c1813; }
+.pull {
+  font-size: 36rpx; line-height: 1.55; margin: 32rpx 0 10rpx; padding-left: 24rpx;
+  border-left: 6rpx solid #9c7320; color: #1c1813;
+}
+.next-wrap { margin-top: 36rpx; }
+
+/* ---------- Report ---------- */
+.grade-row { display: flex; align-items: center; margin: 12rpx 0 24rpx; }
+.grade { font-weight: 900; font-size: 140rpx; line-height: .9; margin-right: 30rpx; color: #1c1813; }
+.grade-line { font-size: 32rpx; color: #7a7063; line-height: 1.4; flex: 1; }
+.figs { display: flex; border-top: 1rpx solid #1c1813; border-bottom: 1rpx solid #1c1813; }
+.figs .cell { flex: 1; text-align: center; padding: 22rpx 6rpx; border-right: 1rpx solid #d8cdb9; }
+.figs .cell:last-child { border-right: 0; }
+.figs .k { font-size: 18rpx; letter-spacing: 3rpx; text-transform: uppercase; color: #7a7063; }
+.figs .v { font-weight: 900; font-size: 46rpx; margin-top: 6rpx; }
+.figs .v.saved { color: #2f6b4f; }
+.figs .v.lost { color: #a72b22; }
+.lock { margin-top: 18rpx; }
+.lock-item { display: flex; padding: 14rpx 0; border-bottom: 1rpx solid rgba(111,101,87,.2); }
+.lock-item .no { font-size: 22rpx; color: #9c7320; margin-right: 22rpx; flex: none; }
+.lock-item .tx { font-size: 27rpx; line-height: 1.5; }
+.mission { font-size: 32rpx; line-height: 1.5; color: #1c1813; margin: 34rpx 0 10rpx; text-align: center; }
+
+/* ---------- Colophon ---------- */
+.colophon {
+  display: block; padding: 28rpx 40rpx 36rpx; border-top: 1rpx solid #d8cdb9;
+  font-size: 20rpx; line-height: 1.7; color: #7a7063; text-align: center;
+}
