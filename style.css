@@ -98,7 +98,7 @@
   }
   .exhibit {
     border: 1px solid var(--line); background: var(--paper);
-    padding: 16px 18px; font-size: 15.5px; line-height: 1.62;
+    padding: 18px 20px; font-size: 15.5px; line-height: 1.8;
     white-space: pre-wrap; word-break: break-word;
   }
   .sender { font-size: 12px; color: var(--muted); margin-top: 10px; font-style: italic; }
@@ -150,8 +150,8 @@
   .tells-kicker { margin: 18px 0 8px; }
   .tells { list-style: none; counter-reset: tell; }
   .tells li {
-    counter-increment: tell; position: relative; padding: 7px 0 7px 34px;
-    font-size: 14px; line-height: 1.55; border-bottom: 1px solid var(--soft);
+    counter-increment: tell; position: relative; padding: 9px 0 9px 34px;
+    font-size: 14px; line-height: 1.72; border-bottom: 1px solid var(--soft);
   }
   .tells li::before {
     content: counter(tell, decimal-leading-zero);
@@ -160,7 +160,7 @@
   }
   .pull {
     font-family: "Fraunces", serif; font-style: italic; font-weight: 500;
-    font-size: 19px; line-height: 1.4; margin: 18px 0 6px; padding-left: 16px;
+    font-size: 19px; line-height: 1.55; margin: 20px 0 8px; padding-left: 16px;
     border-left: 3px solid var(--gold); color: var(--ink);
   }
   .next-wrap { margin-top: 20px; }
@@ -173,8 +173,8 @@
   .linkbtn:active { color: var(--red); }
 
   /* ---------- Screens ---------- */
-  .dek { font-family: "Fraunces", serif; font-style: italic; font-weight: 400; font-size: 19px; line-height: 1.45; color: var(--muted); margin: 14px 0 18px; }
-  .lede { font-size: 15px; line-height: 1.72; color: var(--ink); }
+  .dek { font-family: "Fraunces", serif; font-style: italic; font-weight: 400; font-size: 19px; line-height: 1.6; color: var(--muted); margin: 16px 0 20px; }
+  .lede { font-size: 15px; line-height: 1.85; color: var(--ink); }
   .lede::first-letter { font-family: "Fraunces", serif; font-weight: 900; float: left; font-size: 62px; line-height: .82; padding: 4px 10px 0 0; color: var(--red); }
   .cover-title { font-weight: 900; font-size: 46px; line-height: .98; letter-spacing: -.02em; margin: 6px 0 2px; font-optical-sizing: auto; }
   .cover-title em { font-style: italic; font-weight: 500; color: var(--red); }
@@ -183,7 +183,7 @@
   .contents { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 14px; }
   .contents .ct { font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .contents ul { list-style: none; margin-top: 10px; }
-  .contents li { display: flex; gap: 12px; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--soft); font-size: 14px; line-height: 1.5; }
+  .contents li { display: flex; gap: 12px; align-items: baseline; padding: 8px 0; border-bottom: 1px solid var(--soft); font-size: 14px; line-height: 1.62; }
   .contents li .no { font-family: ui-monospace, monospace; font-size: 11px; color: var(--gold); flex: none; }
 
   .grade-row { display: flex; align-items: center; gap: 18px; margin: 6px 0 14px; }
@@ -225,7 +225,7 @@
     #caseScreen { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
     .case-head .ticks i { width: 12px; }
     .case-title { font-size: 20px; margin: 8px 0 10px; }
-    .exhibit { font-size: 14.5px; line-height: 1.55; padding: 12px 14px; max-height: 30dvh; overflow-y: auto; }
+    .exhibit { font-size: 14.5px; line-height: 1.7; padding: 13px 15px; max-height: 32dvh; overflow-y: auto; }
     #caseScreen.decided .exhibit { max-height: 15dvh; }
     .sender { margin-top: 7px; }
     .atrisk { margin: 12px 0 2px; } .atrisk .fig { font-size: 20px; }
@@ -236,7 +236,7 @@
     .hint { margin-top: 8px; font-size: 11px; }
     .verdict { margin-top: 12px; padding-top: 12px; }
     .stamp { font-size: 20px; }
-    .tells li { padding: 5px 0 5px 32px; font-size: 13px; line-height: 1.45; }
+    .tells li { padding: 7px 0 7px 32px; font-size: 13px; line-height: 1.6; }
     .pull { font-size: 16px; margin: 12px 0 4px; }
     .next-wrap { margin-top: 14px; }
 
@@ -259,3 +259,29 @@
   @media (min-width: 1025px) {
     .app { max-width: 720px; }
   }
+
+  /* ---------- 中文排版修正 / CJK typography ---------- */
+  /* CJK fonts have no true italic — the browser fakes an ugly slant.
+     Keep Fraunces/Inter italics for Latin; render 中文 upright. */
+  html[lang="zh"] .dek,
+  html[lang="zh"] .pull,
+  html[lang="zh"] .grade-line,
+  html[lang="zh"] .mission,
+  html[lang="zh"] .hint,
+  html[lang="zh"] .sender { font-style: normal; }
+  /* the cover headline emphasis: upright + bold + red instead of slanted */
+  html[lang="zh"] .cover-title em { font-style: normal; font-weight: 900; }
+
+  /* Wide .2em tracking gaps Chinese glyphs (案　件); ease it for 中文 small-caps labels. */
+  html[lang="zh"] .mast-top,
+  html[lang="zh"] .mast-meta,
+  html[lang="zh"] .kicker,
+  html[lang="zh"] .ledger .k,
+  html[lang="zh"] .figs .k,
+  html[lang="zh"] .contents .ct,
+  html[lang="zh"] .atrisk .lbl,
+  html[lang="zh"] .act { letter-spacing: .08em; }
+
+  /* A touch more line-height for denser 中文 body text. */
+  html[lang="zh"] .lede { line-height: 1.9; }
+  html[lang="zh"] .exhibit { line-height: 1.85; }
