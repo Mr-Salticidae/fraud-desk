@@ -7613,8 +7613,7 @@ function renderVerdict() {
 
   $("verdictBox").innerHTML = `
     <div class="verdict">
-      <span class="stamp ${right ? "ok" : ""}">${T(stampKey)}</span>
-      ${cost}
+      <div class="verdict-head"><span class="stamp ${right ? "ok" : ""}">${T(stampKey)}</span>${cost}</div>
       <div class="kicker tells-kicker">${T("tells")}</div>
       <ol class="tells">${tells}</ol>
       <p class="pull">${truth}</p>
