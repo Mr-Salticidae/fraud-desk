@@ -79,6 +79,8 @@
   .ledger .v { font-size: 20px; font-weight: 600; margin-top: 1px; font-feature-settings: "tnum"; }
   .ledger .v.saved { color: var(--green); }
   .ledger .v.lost  { color: var(--red); }
+  .ledger .v.trust { color: var(--gold, #9c7320); }
+  .ledger .v.trust.low { color: var(--red); }
 
   /* ---------- Editorial bits ---------- */
   .kicker { font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
@@ -147,6 +149,13 @@
     box-shadow: inset 0 0 0 2px rgba(167,43,34,.15); opacity: .9;
   }
   .stamp.ok { border-color: var(--green); color: var(--green); box-shadow: inset 0 0 0 2px rgba(47,107,79,.15); }
+  .cost {
+    display: inline-block; vertical-align: middle; margin-left: 12px;
+    font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600;
+  }
+  .cost b { font-family: "Fraunces", serif; font-size: 17px; font-weight: 900; letter-spacing: 0; }
+  .cost.money { color: var(--red); }
+  .cost.trust { color: var(--gold, #9c7320); }
   .tells-kicker { margin: 18px 0 8px; }
   .tells { list-style: none; counter-reset: tell; }
   .tells li {
@@ -195,6 +204,7 @@
   .figs .k { font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
   .figs .v { font-family: "Fraunces", serif; font-weight: 900; font-size: 26px; margin-top: 3px; font-feature-settings: "tnum"; }
   .figs .v.saved { color: var(--green); } .figs .v.lost { color: var(--red); }
+  .figs .v.trust { color: var(--gold, #9c7320); } .figs .v.trust.low { color: var(--red); }
   .mission { font-family: "Fraunces", serif; font-style: italic; font-size: 16px; color: var(--ink); margin: 18px 0 6px; line-height: 1.5; text-align: center; }
 
   .colophon { padding: 16px 30px 22px; border-top: 1px solid var(--line); font-size: 10.5px; line-height: 1.7; color: var(--muted); text-align: center; letter-spacing: .02em; }
