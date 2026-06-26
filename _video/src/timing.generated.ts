@@ -5,31 +5,31 @@ export const generatedBeats: GeneratedBeat[] = [
   {
     "id": "b1_hook",
     "startFrame": 0,
-    "durationInFrames": 226,
-    "durationSeconds": 7.523
+    "durationInFrames": 234,
+    "durationSeconds": 7.784
   },
   {
     "id": "b2_setup",
-    "startFrame": 226,
-    "durationInFrames": 196,
-    "durationSeconds": 6.504
+    "startFrame": 234,
+    "durationInFrames": 212,
+    "durationSeconds": 7.053
   },
   {
     "id": "b3_turn",
-    "startFrame": 422,
+    "startFrame": 446,
     "durationInFrames": 262,
     "durationSeconds": 8.725
   },
   {
     "id": "b4_reversal",
-    "startFrame": 684,
-    "durationInFrames": 365,
-    "durationSeconds": 12.147
+    "startFrame": 708,
+    "durationInFrames": 368,
+    "durationSeconds": 12.251
   },
   {
     "id": "b5_cta",
-    "startFrame": 1049,
-    "durationInFrames": 201,
-    "durationSeconds": 6.687
+    "startFrame": 1076,
+    "durationInFrames": 232,
+    "durationSeconds": 7.706
   }
 ];

@@ -24,7 +24,7 @@ const loadEnv = () => {
 
 const VOICE_DESC =
   process.env.VOICE_DESC ||
-  'A Chinese man in his early thirties speaking natural, conversational Mandarin. He sounds like a sharp, down-to-earth friend telling you a slightly chilling real story late at night: intimate, grounded, a little streetwise, with quiet tension and dry warmth. NOT a polished radio host or news anchor, not theatrical. Relaxed but compelling short-video narration, speaking directly to one listener, clear articulation, medium-low pitch.';
+  'A real Chinese man in his early thirties talking to a friend in everyday spoken Mandarin — not reading, just talking. His delivery is loose and spontaneous, like he is thinking as he speaks: gentle breaths, small natural hesitations and micro-pauses, slight shifts in energy and volume, a few words thrown away casually. Warm, grounded, a little wry; intimate and close, as if leaning in to tell you something real late at night. Absolutely NOT a broadcaster, audiobook narrator, news anchor or voice actor — no polished cadence, no theatrical projection, no even metronomic rhythm. Just an ordinary, believable person, medium-low pitch, relaxed unhurried pacing with the uneven rhythm of real conversation.';
 
 const PREVIEW_TEXT =
   process.env.PREVIEW_TEXT ||

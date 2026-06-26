@@ -13,8 +13,8 @@ const timingJsonPath = path.join(audioDir, 'voiceover.timing.json');
 const timingTsPath = path.join(projectRoot, 'src', 'timing.generated.ts');
 const bundledFfprobe = path.join(projectRoot, 'node_modules', '@remotion', 'compositor-win32-x64-msvc', 'ffprobe.exe');
 
-// Custom voice 「反诈夜班·讲述者」 (ElevenLabs Voice Design). Override via env.
-const DEFAULT_VOICE = '0l0qhCKFzv0sYAUMqwD9';
+// Custom voice 「反诈夜班·讲述者 v2」 (ElevenLabs Voice Design, natural/conversational). Override via env.
+const DEFAULT_VOICE = 'wevdvTMhOykP337VqyPu';
 
 // 字幕 = 逐字口播(caption 与 ttsText 完全一致,不写情绪控制标签)
 const beats = [
@@ -68,7 +68,8 @@ const main = async () => {
         body: JSON.stringify({
           text: b.text,
           model_id: modelId,
-          voice_settings: { stability: 0.5, similarity_boost: 0.8, style: 0.25, use_speaker_boost: true },
+          // lower stability + higher style = more human variation, less metronomic/robotic
+        voice_settings: { stability: 0.38, similarity_boost: 0.75, style: 0.45, use_speaker_boost: true },
         }),
       });
       if (!res.ok) throw new Error(`TTS ${b.id} failed ${res.status}: ${await res.text()}`);
