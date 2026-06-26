@@ -7452,6 +7452,20 @@ function shuffle(a) {
 // includes at least one ambiguous "decoy-genuine" and one "stealth-scam,"
 // plus a plain scam and a plain safe. Then ramp it up — easy first, hard last.
 function drawRound() {
+  // Deterministic single-case load for video capture / deep-linking.
+  // ?case=<index> or ?case=<title substring, en or zh>. No-op for normal play.
+  const forced = new URLSearchParams(location.search).get("case");
+  if (forced) {
+    const q = decodeURIComponent(forced).toLowerCase();
+    const c = /^\d+$/.test(q)
+      ? LIBRARY[+q]
+      : LIBRARY.find((x) => (x.title.en + "|" + x.title.zh).toLowerCase().includes(q));
+    if (c) {
+      CASES = [c];
+      Object.assign(state, { i: 0, saved: 0, lost: 0, correct: 0, answered: 0, trust: 100, decided: false, lastChoice: null, lastDelta: null });
+      return;
+    }
+  }
   const pool = shuffle(LIBRARY.slice());
   const n = Math.min(LIBRARY.length, 5 + Math.floor(Math.random() * 6)); // 5..10
   const dif = (c) => c.difficulty || 1;
