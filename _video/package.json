@@ -1,0 +1,27 @@
+{
+  "name": "fraud-desk-video",
+  "version": "0.1.0",
+  "private": true,
+  "description": "《反诈柜台》竖屏短视频批量管线(蒙眼剪辑法 × Remotion × MJ × Seedance)",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts FraudDeskShort out/fraud-desk-pilot.mp4",
+    "voice:design": "tsx scripts/voice-design.ts",
+    "voice:gen": "tsx scripts/generate-voiceover.ts",
+    "capture": "tsx scripts/capture-game.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.469",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.469"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "playwright": "^1.49.0",
+    "tsx": "^4.22.4",
+    "typescript": "^5.5.4"
+  }
+}

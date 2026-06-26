@@ -8,3 +8,10 @@
 Thumbs.db
 .DS_Store
 *.log
+
+# _video pipeline: deps, renders, captures, secrets (kept: code + small voiceover)
+_video/node_modules/
+_video/out/
+_video/.env
+_video/public/capture/
+_video/public/audio/_*

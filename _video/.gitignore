@@ -1,0 +1,6 @@
+node_modules/
+out/
+.env
+# big/regenerable media: keep small voiceover + timing, drop captures & temp
+public/capture/
+public/audio/_*

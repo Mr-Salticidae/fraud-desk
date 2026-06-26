@@ -1,0 +1,55 @@
+{
+  "provider": "elevenlabs",
+  "modelId": "eleven_multilingual_v2",
+  "voiceId": "0l0qhCKFzv0sYAUMqwD9",
+  "fps": 30,
+  "totalFrames": 1250,
+  "totalSeconds": 41.67,
+  "beats": [
+    {
+      "id": "b1_hook",
+      "section": "hook",
+      "caption": "凌晨一点，你妈收到条短信：银行卡刚在境外被刷了六千八，让她马上冻结。",
+      "audioSrc": "audio/b1_hook.mp3",
+      "startFrame": 0,
+      "durationInFrames": 226,
+      "durationSeconds": 7.523265
+    },
+    {
+      "id": "b2_setup",
+      "section": "setup",
+      "caption": "九五开头的号，金额吓人，口气紧急。第一反应——诈骗，拦掉。",
+      "audioSrc": "audio/b2_setup.mp3",
+      "startFrame": 226,
+      "durationInFrames": 196,
+      "durationSeconds": 6.50449
+    },
+    {
+      "id": "b3_turn",
+      "section": "turn",
+      "caption": "但它没让你点链接、没要验证码、没让你把钱转去安全账户。它只让你打自己卡背面的电话。",
+      "audioSrc": "audio/b3_turn.mp3",
+      "startFrame": 422,
+      "durationInFrames": 262,
+      "durationSeconds": 8.724898
+    },
+    {
+      "id": "b4_reversal",
+      "section": "reversal",
+      "caption": "这条，是真的。真银行的盗刷预警就长这样。你把它当骗局拦了，你妈下次就再也不信预警——这才是骗子最想要的。",
+      "audioSrc": "audio/b4_reversal.mp3",
+      "startFrame": 684,
+      "durationInFrames": 365,
+      "durationSeconds": 12.146939
+    },
+    {
+      "id": "b5_cta",
+      "section": "cta",
+      "caption": "真预警把主动权还给你，骗局想自己攥着。关注，练出反诈直觉。",
+      "audioSrc": "audio/b5_cta.mp3",
+      "startFrame": 1049,
+      "durationInFrames": 201,
+      "durationSeconds": 6.687347
+    }
+  ]
+}
